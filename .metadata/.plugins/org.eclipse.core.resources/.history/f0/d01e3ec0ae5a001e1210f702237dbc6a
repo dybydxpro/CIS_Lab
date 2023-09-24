@@ -1,0 +1,37 @@
+package moviemanager.Modals;
+
+public class Rental {
+	private String renteddate;
+	private String returndate;
+	private double amount;
+	
+	public Rental(String renteddate, String returndate, double amount) {
+		this.renteddate = renteddate;
+		this.returndate = returndate;
+		this.amount = amount;
+	}
+
+	public String getRenteddate() {
+		return renteddate;
+	}
+
+	public void setRenteddate(String renteddate) {
+		this.renteddate = renteddate;
+	}
+
+	public String getReturndate() {
+		return returndate;
+	}
+
+	public void setReturndate(String returndate) {
+		this.returndate = returndate;
+	}
+
+	public double getAmount() {
+		return amount;
+	}
+
+	public void setAmount(double amount) {
+		this.amount = amount;
+	}
+}
