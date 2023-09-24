@@ -62,14 +62,12 @@ public class Rental {
 	}
 
 
-	
-	
 	public void calculateRentalAmount() {
 		try {
 			double val = 0;
 			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MMM-dd");
-			Date dt1 = new SimpleDateFormat("dd-MM-yyyy").parse(renteddate);
-			Date dt2 = new SimpleDateFormat("dd-MM-yyyy").parse(returndate);
+			Date dt1 = new SimpleDateFormat("dd-MM-yyyy").parse(this.renteddate);
+			Date dt2 = new SimpleDateFormat("dd-MM-yyyy").parse(this.returndate);
 			long diff = dt2.getTime() - dt1.getTime();
 			int days = (int)((diff)/(1000*60*60*24));
 			
@@ -85,7 +83,15 @@ public class Rental {
 		}
 	}
 	
-	public void calculateRentalAmount() {
-		
+	public void findReturnDate(int numberOfDays) {
+		try {
+			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+			Calendar c = Calendar.getInstance();
+			c.setTime(new Date());
+			c.add(Calendar.DATE, numberOfDays);
+			String output = sdf.format(c.getTime());
+			this.returndate = output;
+		}
+		catch(Exception e) {}
 	}
 }
