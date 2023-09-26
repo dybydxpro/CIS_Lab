@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"moviemanager","l":"Customer"},{"p":"moviemanager","l":"Movie"},{"p":"moviemanager","l":"Rental"}];updateSearchResults();
